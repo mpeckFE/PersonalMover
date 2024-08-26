@@ -42,7 +42,7 @@ def is_within_last_day(date_str):
 def send_slack_message(message):
     """Uses the slack webhook to send a message in the correct chat"""
     payload = '{"text":"%s"}' % message
-    response = requests.post("https://hooks.slack.com/services/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", 
+    response = requests.post("https://hooks.slack.com/services/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", 
                              data=payload)
     print(response.text)
 
