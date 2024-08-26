@@ -36,7 +36,7 @@ def is_within_last_day(date_str):
     article_date = datetime.fromisoformat(date_str)
     if article_date.tzinfo is None:
         article_date = article_date.replace(tzinfo=timezone.utc)
-    one_day_ago = datetime.now(timezone.utc) - timedelta(days=4)
+    one_day_ago = datetime.now(timezone.utc) - timedelta(days=1)
     return article_date > one_day_ago
 
 def send_slack_message(message):
